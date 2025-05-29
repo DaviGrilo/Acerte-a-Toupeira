@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerte a Toupeira</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./img/Toupeira-logo.png" type="png">
+</head>
+
+<body>
+    <div id="startScreen"
+        class="fixed inset-0 bg-gradient-to-b from-blue-900 to-blue-700 text-white flex flex-col items-center justify-center z-50 transition-opacity duration-700">
+        <img src="./img/Toupeira-logo.png" alt="Logo Toupeira" class="max-w-xs w-60 h-auto mb-6 shadow-lg">
+        <h1 class="text-5xl font-bold mb-2 animate-bounce drop-shadow-lg">Acerte a Toupeira!</h1>
+        <p class="mb-6 text-lg text-blue-100 italic">Mostre sua agilidade antes que ela fuja!</p>
+        <button id="startGameButton"
+            class="px-6 py-3 bg-green-500 hover:bg-green-600 text-lg font-semibold rounded shadow-lg transition transform hover:scale-105">
+            Começar
+        </button>
+    </div>
+
+
+    <div class="game-container">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">Acerte a Toupeira!</h1>
+        <div class="flex justify-between items-center mb-4">
+            <div class="text-2xl font-semibold text-gray-700">Pontuação: <span id="score"
+                    class="text-green-600">0</span></div>
+            <div class="text-2xl font-semibold text-gray-700">Tempo: <span id="time" class="text-blue-600">30</span>s
+            </div>
+        </div>
+        <div class="game-board" id="gameBoard">
+        </div>
+        <div class="button-group">
+            <button id="startButton" class="button">Iniciar Jogo</button>
+            <button id="resetButton" class="button reset">Reiniciar Jogo</button>
+        </div>
+    </div>
+
+    <div id="messageBox" class="message-box">
+        <p id="messageText" class="text-xl"></p>
+        <button id="closeMessageButton">OK</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

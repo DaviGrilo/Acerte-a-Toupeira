@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #e0f2f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+.game-container {
+    background-color: #ffffff;
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    padding: 2.5rem;
+    text-align: center;
+    max-width: 90%;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    background-color: #8b4513;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.hole {
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+    background-color: #5a2c0f;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #4a240b;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
+
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hammer"><path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0-.83-.83-.83-2.17 0-3L12 9"/><path d="M18 11.5 22 7c-.5-2.5-2-4-4-4-2.5 1-4 2.5-7 7L11.5 18l2.5 2.5L22 17l-2.5-2.5c-.64-.64-1.32-1.09-2-1.46z"/></svg>') 15 15, auto;
+}
+.mole {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 80%;
+    background-color: #6d4c41;
+    border-radius: 50% 50% 0 0;
+    transition: transform 0.2s ease-out;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 2.5rem;
+    line-height: 1;
+    padding-bottom: 10%;
+}
+.mole.up {
+    transform: translateX(-50%) translateY(-100%);
+}
+.mole.hit {
+    background-color: #a1887f;
+}
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(to bottom right, #4CAF50, #66BB6A);
+    color: white;
+    border: none;
+}
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    background-image: linear-gradient(to bottom right, #66BB6A, #4CAF50);
+}
+.button.reset {
+    background-image: linear-gradient(to bottom right, #f44336, #ef5350);
+}
+.button.reset:hover {
+    background-image: linear-gradient(to bottom right, #ef5350, #f44336);
+}
+.message-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.message-box button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.message-box button:hover {
+    background-color: #66BB6A;
+}
+
+.mole.up {
+    transform: translateX(-50%) translateY(-100%);
+    cursor: pointer;
+    filter: drop-shadow(0 0 8px #00ff00);
+    animation: pulse 0.6s infinite alternate;
+}
+
