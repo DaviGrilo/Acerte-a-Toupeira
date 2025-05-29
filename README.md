@@ -2,7 +2,10 @@
 
 Bem-vindo ao **Acerte a Toupeira!**, um jogo divertido e interativo onde seu objetivo é clicar nas toupeiras antes que elas desapareçam. Teste seus reflexos e veja quantos pontos você consegue em 30 segundos!
 
-![Logo do Jogo](./img/Toupeira-logo.png)
+<p align="center">
+  <img src="./img/Toupeira-logo.png" alt="Logo do Jogo" width="200"/>
+</p>
+
 
 ## 🕹️ Como Jogar
 
